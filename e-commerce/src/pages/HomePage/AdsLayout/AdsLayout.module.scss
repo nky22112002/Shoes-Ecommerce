@@ -1,0 +1,35 @@
+
+  
+  .hero-title { margin-bottom: 10px; 
+    font-size: var(--fs-1);
+    font-weight: var(--fw-300);
+    line-height: 1.5;
+}
+.hero-title strong{
+    font-weight: bold;
+}
+  
+  .hero-title > strong { display: block; }
+  
+  .hero-text {
+    color: var(--onyx);
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-8);
+    line-height: 1.8;
+    max-width: 46ch;
+    margin-bottom: 25px;
+  }
+  .hero-text { font-size: var(--fs-7); }
+  
+
+  .hero-text {
+    font-size: var(--fs-6);
+    max-width: 50ch;
+  }
+  .has-scrollbar {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: inline mandatory;
+  }

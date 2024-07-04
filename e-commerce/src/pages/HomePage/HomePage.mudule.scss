@@ -1,0 +1,24 @@
+.container {
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+    padding: 20px 15px;
+    margin-inline: auto;
+    width: 100%;
+   }
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--ff-josefin-sans);
+}
+.hero { height: 580px; }
+
+.hero .container { max-width: 1000px; 
+    padding: 0 15px;
+}
+.section { padding-block: var(--section-padding); }

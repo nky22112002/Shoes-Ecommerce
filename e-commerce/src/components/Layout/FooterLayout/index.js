@@ -1,3 +1,4 @@
+import images from "../../../assets";
 import styles from "./FooterLayout.module.scss";
 import classNames from "classnames/bind";
 
@@ -10,7 +11,7 @@ function FooterLayout(){
                 <div className={cx("footer-brand")}>
                     <a href="#" className={cx("logo")}>
                     <img
-                        src="./assets/images/logo.svg"
+                        src={images.logo}
                         width={160}
                         height={50}
                         alt="Footcap logo"
