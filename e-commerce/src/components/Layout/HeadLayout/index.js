@@ -1,13 +1,58 @@
+import React, { useEffect, useState } from 'react';
 import styles from "./HeadLayout.module.scss"
 import classNames from "classnames/bind"
 import images from "../../../assets";
 
 const cx = classNames.bind(styles);
+
 function HeadLayout(){
+
+  useEffect(() => {
+    const overlay = document.querySelector("[data-overlay]");
+    const navOpenBtn = document.querySelector("[data-nav-open-btn]");
+    const navbar = document.querySelector("[data-navbar]");
+    const navCloseBtn = document.querySelector("[data-nav-close-btn]");
+    const header = document.querySelector("[data-header]");
+    const goTopBtn = document.querySelector("[data-go-top]");
+    if (overlay && navOpenBtn && navbar && navCloseBtn && header && goTopBtn) {
+      const navElements = [overlay, navOpenBtn, navCloseBtn];
+
+      const handleClickNavbar = () => {
+        navbar.classList.toggle(cx("active"));
+        overlay.classList.toggle(cx("active"));
+      };
+      navElements.forEach((element) => {
+        element.addEventListener("click", handleClickNavbar);
+      });
+      const handleScroll = () => {
+        console.log("Scroll event");
+        if (window.scrollY >= 80) {
+          header.classList.add(cx("active"));
+          goTopBtn.classList.add(cx("active"));
+        } else {
+          header.classList.remove(cx("active"));
+          goTopBtn.classList.remove(cx("active")); 
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        navElements.forEach((element) => {
+          element.removeEventListener("click", handleClickNavbar);
+        });
+        window.removeEventListener("scroll", handleScroll);
+      };
+        
+      
+    }
+  }, []); 
+  
+
+  
     return(
-            <header className={cx("header")} data-header="">
+            <header className={cx("header")} data-header>
             <div className={cx("container")}>
-                <div className={cx("overlay")} data-overlay="" />
+                <div className={cx("overlay")} data-overlay />
                 <a href="#" className={cx("logo")}>
                 <img
                     src={images.logo}
@@ -18,15 +63,15 @@ function HeadLayout(){
                 </a>
                 <button
                 className={cx("nav-open-btn")}
-                data-nav-open-btn=""
+                data-nav-open-btn
                 aria-label="Open Menu"
                 >
                 <ion-icon name="menu-outline" />
                 </button>
-                <nav className={cx("navbar")} data-navbar="">
+                <nav className={cx("navbar")} data-navbar>
                 <button
                     className={cx("nav-close-btn")}
-                    data-nav-close-btn=""
+                    data-nav-close-btn
                     aria-label="Close Menu"
                 >
                     <ion-icon name="close-outline" />

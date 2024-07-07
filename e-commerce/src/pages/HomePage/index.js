@@ -7,6 +7,7 @@ import styles from "./HomePage.mudule.scss";
 
 import classNames from "classnames/bind";
 import ProductLayout from "./ProductLayout";
+import CTALayout from "./CTALayout";
 const cx = classNames.bind(styles);
 function HomePage() {
     return (
@@ -28,7 +29,11 @@ function HomePage() {
                     <ProductLayout/>
                 </div>
             </section>
+            <section className={cx("section", "cta")}><div className={cx("container")}><CTALayout/></div></section>
             <FooterLayout/>
+            <a href="#top" className={cx("go-top-btn")} data-go-top>
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </a>
         </div>
         
     )
