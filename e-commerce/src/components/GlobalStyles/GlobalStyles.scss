@@ -423,13 +423,6 @@
 
 
 
-  /**
-   * INSTA POST
-   */
-
-  .insta-post-list .insta-post-item { min-width: 25%; }
-
-
 
   /**
    * FOOTER
@@ -487,34 +480,7 @@
 
 
 
-  /**
-   * SPECIAL
-   */
-
-  .special-banner .banner-title { --fs-4: 2.2rem; }
-
-  .special-product .has-scrollbar > li { min-width: 100%; }
-
-  .special .container {
-    display: flex;
-    gap: 25px;
-  }
-
-  .special .section-title { margin-block-start: 0; }
-
-  .special-banner,
-  .special-product { min-width: calc(50% - 12.5px); }
-
-  .special-banner { height: auto; }
-
-
-
-  /**
-   * INSTA POST
-   */
-
-  .insta-post-list .insta-post-item { min-width: 20%; }
-
+  
 
 
   /**
@@ -646,24 +612,7 @@
 
 
 
-  /**
-   * SPECIAL
-   */
-
-  .special-banner { min-width: calc(33.33% - 25px); }
-
-  .special-product { min-width: 66.66%; }
-
-  .special-product .has-scrollbar > li { min-width: calc(50% - 12.5px); }
-
-
-
-  /**
-   * INSTA POST
-   */
-
-  .insta-post-list .insta-post-item { min-width: 16.666%; }
-
+  
 }
 
 
@@ -722,44 +671,6 @@
 
   .product-list { grid-template-columns: repeat(4, 1fr); }
 
-
-
-  /**
-   * SPECIAL
-   */
-
-  .special-banner { min-width: calc(25% - 25px); }
-
-  .special-product .has-scrollbar > li { min-width: calc(33.33% - 16.66px); }
-
-  .special-banner .banner-title { --fs-4: 2.4rem; }
-
-
-
-  /**
-   * SERVICE
-   */
-
-  .service-item { width: 275px; }
-
-  .service-card .card-icon {
-    min-width: 70px;
-    height: 70px;
-  }
-
-  .service-card .card-title { --fs-6: 2rem; }
-
-
-
-  /**
-   * INSTA POST
-   */
-
-  .insta-post { padding-block-end: 0; }
-
-  .insta-post-list .insta-post-item { min-width: 12.5%; }
-
-  .insta-post-list { padding-bottom: 0; }
 
 
 

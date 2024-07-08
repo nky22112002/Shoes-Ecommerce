@@ -14,5 +14,18 @@ const images = {
     product_8: require('./images/product-8.jpg'),
     cta_1: require('./images/cta-1.jpg'),
     cta_2: require('./images/cta-2.jpg'),
+    special_banner: require('./images/special-banner.jpg'),
+    service_1: require('./images/service-1.png'),
+    service_2: require('./images/service-2.png'),
+    service_3: require('./images/service-3.png'),
+    service_4: require('./images/service-4.png'),
+    post_1: require('./images/insta-1.jpg'),
+    post_2: require('./images/insta-2.jpg'),
+    post_3: require('./images/insta-3.jpg'),
+    post_4: require('./images/insta-4.jpg'),
+    post_5: require('./images/insta-5.jpg'),
+    post_6: require('./images/insta-6.jpg'),
+    post_7: require('./images/insta-7.jpg'),
+    post_8: require('./images/insta-8.jpg'),
 }
 export default images;

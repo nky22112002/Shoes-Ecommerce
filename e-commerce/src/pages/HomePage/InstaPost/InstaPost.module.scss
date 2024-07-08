@@ -1,0 +1,46 @@
+.insta-post-list { gap: 0; }
+
+.insta-post-list .insta-post-item {
+  position: relative;
+  min-width: 33.33%;
+  aspect-ratio: 1 / 1;
+}
+
+.insta-post-link {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--oxford-blue_60);
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.insta-post-link ion-icon {
+  color: var(--white);
+  font-size: 40px;
+}
+
+.insta-post-link:is(:hover, :focus) { opacity: 1; }
+
+
+
+@media (min-width: 575px) {
+    .insta-post-list .insta-post-item { min-width: 25%; }
+
+}
+@media (min-width: 768px) {
+    .insta-post-list .insta-post-item { min-width: 20%; }
+
+}
+@media (min-width: 992px) {
+    .insta-post-list .insta-post-item { min-width: 16.666%; }
+
+}
+@media (min-width: 1200px) {
+    .insta-post { padding-block-end: 0; }
+
+    .insta-post-list .insta-post-item { min-width: 12.5%; }
+
+    .insta-post-list { padding-bottom: 0; }
+}
