@@ -1,0 +1,49 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative; /* Thêm position: relative để định vị nút đóng */
+}
+
+.modal-close {
+    position: absolute; /* Vị trí tuyệt đối so với modal-content */
+    top: 10px; /* Đặt khoảng cách từ phía trên */
+    right: 10px; /* Đặt khoảng cách từ phía phải */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-imgs {
+    width: 50%; /* Đặt kích thước tối đa cho hình ảnh để hình ảnh chỉ chiếm 50% chiều rộng */
+    height: 80%;
+    margin-right: 20px; /* Tạo khoảng cách giữa hình ảnh và thông tin sản phẩm */
+  }
+  .modal-data {
+    display: flex;
+    flex-direction: column; /* Đảm bảo các phần tử con xếp theo cột */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    width: 50%; /* Chiếm 50% không gian còn lại bên phải */
+    margin-right: 0;
+    span{
+        font-size: 30px;
+    }
+  }

@@ -1,0 +1,154 @@
+
+.body-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+.main-content {
+  display: flex;
+  gap: 20px; /* Khoảng cách giữa sidebar và phần nội dung chính */
+  padding: 20px;
+  width: 100%;
+}
+.product-wrapper {
+  flex: 1; /* Đảm bảo sản phẩm chiếm không gian còn lại */
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px; /* Padding bên trái và bên phải */
+  width: 100%;
+}
+
+.product-list {
+  display: grid;
+  gap: 50px 25px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr); /* Sử dụng 4 cột */
+}
+.product-card {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.sidebarItem {
+  border-radius: 10px; /* Bo góc cho các mục trong sidebar */
+  overflow: hidden; /* Đảm bảo rằng nội dung bên trong không tràn ra ngoài vùng bo góc */
+  background-color: #f9f9f9; /* Thêm màu nền để dễ thấy sự bo góc */
+  margin-bottom: 10px; /* Tạo khoảng cách giữa các mục */
+  padding: 10px; /* Tạo khoảng cách giữa nội dung và viền của mục */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng để mục nổi bật hơn */
+}
+
+.sidebar {
+  width: 250px; /* Chiều rộng của sidebar */
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+  
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .dropdownToggle {
+    display: none;
+    
+  }
+  
+  .dropdownLabel {
+    display: block;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+  }
+  
+  .dropdownList {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .dropdownList li {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdownList li:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Show the dropdown list when the corresponding checkbox is checked */
+  .dropdownToggle:checked + .dropdownLabel + .dropdownList {
+    height: auto;
+  }
+  .selected {
+    background-color: #f0f0f0;  /* Màu nền khi được chọn */
+    font-weight: bold;
+}
+.product-item, .product-card{
+  position: relative; /* Để hình ảnh được đặt ở vị trí chính xác bên ngoài */
+  overflow: visible; /* Đảm bảo rằng hình ảnh không bị cắt khi di chuyển ra ngoài */
+}
+.card-action-list {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.product-card:is(:hover, :focus) .card-action-list {
+  right: 10px;
+  opacity: 1;
+}
+.product-card::before, .product-card::after{
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  transition: .5 ease-in-out;
+
+}
+.product-card::before{
+  top: -6%;
+  right: -6%;
+  width: 9rem;
+  height: 9rem;
+}
+.product-card::after{
+  bottom: -6%;
+  left: -6%;
+  width: 5rem;
+  height: 5rem;
+}
+.product-card:hover::before{
+  transform: scale(1.8);
+}
+.product-card:hover::after{
+  transform: scale(0);
+}
+.product-card,.product-list,.card-banner ,.product-wrapper{
+  overflow: visible;
+
+}
+
+
+
+

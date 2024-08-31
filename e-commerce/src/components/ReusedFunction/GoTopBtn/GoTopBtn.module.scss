@@ -1,0 +1,27 @@
+.go-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--bittersweet);
+    color: var(--white);
+    font-size: 20px;
+    padding: 10px;
+    border: 4px solid #17c970;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-1);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ion-icon{
+      padding: 2px;
+
+    }
+    
+}
+.go-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+  }

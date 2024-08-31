@@ -1,0 +1,94 @@
+.product-detail-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 48px;
+  }
+  
+  .product-detail-wrapper-left {
+    flex: 0 0 60%; // Hình ảnh chiếm 60% chiều rộng trang
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .product-detail-image {
+    width: 80%; /* Keep consistent width */
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the specified height and width without stretching */
+}
+  .thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px; /* Space between thumbnails and main image */
+    height: 500px; /* Giới hạn chiều cao bằng với product-detail-image */
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi vượt quá chiều cao */
+  }
+  .thumbnail-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari và Opera: Ẩn thanh cuộn */
+}
+  
+  .thumbnail {
+    width: 60px; /* Thumbnail size */
+    height: 60px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between thumbnails */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  .thumbnail:hover {
+    width: 60px; /* Keep thumbnail size on hover */
+    height: 60px; /* Keep thumbnail size on hover */
+}
+.product-detail-wrapper-right {
+  flex: 0 0 40%; /* Phần còn lại chiếm 40% */
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 2.25rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Căn giữa nội dung */
+      border-radius: 20px; /* Bo góc tròn 2 bên */
+      
+      ion-icon {
+        margin-right: 5px;
+        padding-bottom: 2.5px;
+      }
+
+      
+  }
+
+  span {
+      padding-top: 28px;
+  }
+
+  .h3.product-detail-card-title {
+      margin: 0;
+      font-size: 1.7rem;
+  }
+
+  .product-detail-card-price {
+      font-size: bold 1.45rem;
+      color: #c61818;
+      margin: 10px 0;
+  }
+.favorite-btn{
+  background-color: rgba(204, 70, 90, 0.922);
+  margin-bottom: 32px;
+  color: #e1d7d7;
+  &:hover{
+    background-color: #c39393;
+  }
+}
+}
+
+
+
+

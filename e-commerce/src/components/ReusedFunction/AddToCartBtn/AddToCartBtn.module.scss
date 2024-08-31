@@ -1,0 +1,31 @@
+.cart-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+.flying-image {
+    position: absolute;
+    top: 10px; /* Hoặc giá trị khác tùy thuộc vào yêu cầu */
+    left: 10px; /* Hoặc giá trị khác tùy thuộc vào yêu cầu */
+    width: 50px; /* Điều chỉnh kích thước nếu cần */
+    height: 50px; /* Điều chỉnh kích thước nếu cần */
+    z-index: 9999; /* Đảm bảo hình ảnh hiển thị trên các phần tử khác */
+    animation: fly_to_cart 1s ease-in-out infinite;
+  }
+
+  
+  /* Thêm vào CSS của bạn */
+  @keyframes fly_to_cart {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translate(calc(var(--delta-x) - 40px), calc(var(--delta-y) - 10px));
+      opacity: 0;
+    }
+  }

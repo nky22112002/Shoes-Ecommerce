@@ -5,6 +5,8 @@
     padding: 20px 15px;
     margin-inline: auto;
     width: 100%;
+    overflow: visible;
+    position: relative;
    }
 .hero {
     background-repeat: no-repeat;
@@ -15,13 +17,20 @@
     justify-content: flex-start;
     align-items: center;
     font-family: var(--ff-josefin-sans);
+    overflow: visible;
+    position: relative;
+
 }
 .hero { height: 580px; }
 
 .hero .container { max-width: 1000px; 
     padding: 0 15px;
 }
-.section { padding-block: var(--section-padding); }
+.section { 
+    padding-block: var(--section-padding); 
+    overflow: visible;
+    position: relative;
+}
 
 
 
